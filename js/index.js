@@ -40,3 +40,71 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Start my code
+
+// set navigation links
+
+let navLinks = document.querySelectorAll('a')
+
+navLinks[0].innerHTML = siteContent['nav']['nav-item-1']
+navLinks[1].innerHTML = siteContent['nav']['nav-item-2']
+navLinks[2].innerHTML = siteContent['nav']['nav-item-3']
+navLinks[3].innerHTML = siteContent['nav']['nav-item-4']
+navLinks[4].innerHTML = siteContent['nav']['nav-item-5']
+navLinks[5].innerHTML = siteContent['nav']['nav-item-6']
+
+// set cta 
+
+document.querySelector('h1').innerHTML = siteContent['cta']['h1']
+document.querySelector('button').innerHTML = siteContent['cta']['button']
+document.querySelector('.cta img').setAttribute('src', siteContent['cta']['img-src'])
+
+// set main content
+
+let mainContentBlockHeaders = document.querySelectorAll('.text-content h4')
+
+mainContentBlockHeaders[0].innerHTML = siteContent['main-content']['features-h4']
+mainContentBlockHeaders[1].innerHTML = siteContent['main-content']['about-h4']
+mainContentBlockHeaders[2].innerHTML = siteContent['main-content']['services-h4']
+mainContentBlockHeaders[3].innerHTML = siteContent['main-content']['product-h4']
+
+let mainContentBlockText = document.querySelectorAll('.text-content p')
+
+mainContentBlockText[0].innerHTML = siteContent['main-content']['features-content']
+mainContentBlockText[1].innerHTML = siteContent['main-content']['about-content']
+mainContentBlockText[2].innerHTML = siteContent['main-content']['services-content']
+mainContentBlockText[3].innerHTML = siteContent['main-content']['product-content']
+
+document.querySelector('.middle-img').setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// set contact info
+
+document.querySelector('.contact h4').innerHTML = siteContent['contact']['contact-h4']
+
+let contactInfo = document.querySelectorAll('.contact p')
+
+contactInfo[0].innerHTML = siteContent['contact']['address']
+contactInfo[1].innerHTML = siteContent['contact']['phone']
+contactInfo[2].innerHTML = siteContent['contact']['email']
+
+
+// set footer info
+
+document.querySelector('footer p').innerHTML = siteContent['footer']['copyright']
+
+// changing color of navigation
+
+    navLinks.forEach(link => {link.style.color = 'green'})
+
+    // adding 2 links using prepend and append
+
+    let parent = document.querySelector('nav a')
+
+    navLinks[0].append(' Team')
+    navLinks[1].prepend('Item ')
+
+
+
+
